@@ -27,4 +27,23 @@ public class AppTest {
    assertEquals("It's a tie!", testApp.checkWinner("scissors", "scissors"));
  }
 
+ @Test
+ public void checkWinner_rockBeatsScissors_PlayerTwoWins() {
+   App testApp = new App();
+   assertEquals("Player two wins!", testApp.checkWinner("scissors", "rock"));
+}
+
+@Test
+public void checkWinner_paperBeatsRock_PlayerTwoWins() {
+  App testApp = new App();
+  assertEquals("Player two wins!", testApp.checkWinner("rock", "paper"));
+}
+
+@Test
+public void checkWinner_scissorsBeatsPaper_PlayerTwoWins() {
+  App testApp = new App();
+  assertEquals("Player two wins!", testApp.checkWinner("paper", "scissors"));
+}
+
+
 }

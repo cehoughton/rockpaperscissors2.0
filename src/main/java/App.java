@@ -4,8 +4,19 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 public class App {
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+    String layout = "templates/layout.vtl";
 
+    get("/", (request, response) -> {
+      HashMap model = new HashMap();
+
+      model.put("template", "templates/input.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+
+
+  }
 
 
 public static String checkWinner(String player1Input, String player2Input) {

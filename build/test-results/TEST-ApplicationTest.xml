@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ApplicationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2016-02-10T19:46:30" hostname="epicodus-117.local" time="0.151">
+<testsuite name="ApplicationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2016-02-10T23:41:40" hostname="epicodus-117.local" time="0.261">
   <properties/>
-  <testcase name="rootTest" classname="ApplicationTest" time="0.151">
-    <failure message="java.lang.AssertionError: &#10;Expecting:&#10; &lt;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;html&gt;&#13;&#10;  &lt;head/&gt;&#13;&#10;  &lt;body/&gt;&#13;&#10;&lt;/html&gt;&#13;&#10;&quot;&gt;&#10;to contain:&#10; &lt;&quot;rock-paper-scissors&quot;&gt; " type="java.lang.AssertionError">java.lang.AssertionError: 
+  <testcase name="rootTest" classname="ApplicationTest" time="0.261">
+    <failure message="java.lang.AssertionError: &#10;Expecting:&#10; &lt;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;html&gt;&#13;&#10;  &lt;head/&gt;&#13;&#10;  &lt;body&gt;&#13;&#10;    &lt;h2&gt;&#13;&#10;      404 Not found&#13;&#10;    &lt;/h2&gt;&#13;&#10;  &lt;/body&gt;&#13;&#10;&lt;/html&gt;&#13;&#10;&quot;&gt;&#10;to contain:&#10; &lt;&quot;rock-paper-scissors&quot;&gt; " type="java.lang.AssertionError">java.lang.AssertionError: 
 Expecting:
  &lt;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;html&gt;
   &lt;head/&gt;
-  &lt;body/&gt;
+  &lt;body&gt;
+    &lt;h2&gt;
+      404 Not found
+    &lt;/h2&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 &quot;&gt;
 to contain:
@@ -65,5 +69,14 @@ to contain:
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[[Thread-4] INFO spark.webserver.SparkServer - == Spark has ignited ...
+[Thread-4] INFO spark.webserver.SparkServer - >> Listening on 0.0.0.0:4567
+[Thread-4] INFO org.eclipse.jetty.server.Server - jetty-9.0.2.v20130417
+[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@79f0bf4a{HTTP/1.1}{0.0.0.0:4567}
+[qtp1714711612-22] INFO spark.webserver.MatcherFilter - The requested route [/input] has not been mapped in Spark
+[Test worker] INFO spark.webserver.SparkServer - >>> Spark shutting down ...
+[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@7f733cf6 by 
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@79f0bf4a{HTTP/1.1}{0.0.0.0:4567}
+[Test worker] INFO spark.webserver.SparkServer - done
+]]></system-err>
 </testsuite>

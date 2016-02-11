@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Random;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
@@ -44,6 +45,20 @@ public static String checkWinner(String player1Input, String player2Input) {
   } else {
     winner = "Player two wins!";
   } return winner;
-
  }
+
+ public static String computerChooses() {
+   String user2Input = "";
+   Random myRandomGenerator = new Random();
+   randomIntChoice = myRandomGenerator.nextInt(3);
+
+   if ( randomIntChoice < 1 ) {
+     user2Input = "rock";
+   } else if ( randomIntChoice > 0 && < 2 ) {
+     user2Input = "paper";
+   } else {
+     user2Input = "scissors"
+   }
+ }
+ 
 }
